@@ -1,6 +1,7 @@
 [
   {
     "_id": "1",
+    "image": "https://i.ibb.co.com/Rb0Ky6H/bvlgari-octo-finissimo-x-laurent-grasso-104005.webp",
     "brand_name": "Bvlgari",
     "name": "Octo Finissimo X Laurent Grasso",
     "rating": 4.8,
@@ -16,6 +17,7 @@
   },
   {
     "_id": "2",
+    "image": "https://i.ibb.co.com/3MZbNb8/bvlgari-bvlgari-aluminium-white-automatic-103964.webp",
     "brand_name": "Bvlgari",
     "name": "Bvlgari Aluminium White Automatic",
     "rating": 4.6,
@@ -28,6 +30,7 @@
   },
   {
     "_id": "3",
+    "image": "https://i.ibb.co.com/s6tmzM5/rolex-yacht-master-40-diamond-pave-dial-men-s-watch-126655-0005-109.jpg",
     "brand_name": "Rolex",
     "name": "Explorer II White Dial Oystersteel",
     "rating": 4.9,
@@ -40,6 +43,7 @@
   },
   {
     "_id": "4",
+    "image": "https://i.ibb.co.com/Ttt6D39/rolex-explorer-ii-watch-m226570-0001-75.jpg",
     "brand_name": "Rolex",
     "name": "Yacht-Master 40 Diamond",
     "rating": 4.9,
@@ -52,6 +56,7 @@
   },
   {
     "_id": "5",
+    "image": "https://i.ibb.co.com/drr9mfX/Casio-MTP-VD01-2-EVUDFWatch-4-800x.webp",
     "brand_name": "Casio",
     "name": "MTP-VD01-2EVUDF",
     "rating": 4.4,
@@ -67,6 +72,7 @@
   },
   {
     "_id": "6",
+    "image": "https://i.ibb.co.com/hBnRX15/Casio-MTP-1374-D-2-AVDFWatch-1-600x.webps",
     "brand_name": "Casio",
     "name": "MTP-1374D-2AVDF",
     "rating": 4.3,
