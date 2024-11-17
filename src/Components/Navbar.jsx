@@ -26,9 +26,9 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              <NavLink to="/">Home</NavLink>
-              <NavLink to="/brands">Brands</NavLink>
-              <NavLink to="/profile">My Profile</NavLink>
+              <NavLink className="font-bold" to="/">Home</NavLink>
+              <NavLink className="font-bold" to="/brands">Brands</NavLink>
+              <NavLink className="font-bold" to="/profile">Profile</NavLink>
             </ul>
           </div>
           {/* <a className="btn btn-ghost text-xl">daisyUI</a> */}
@@ -36,9 +36,9 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex ">
           <ul className="menu menu-horizontal px-1 gap-5">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/brands">Brands</NavLink>
-            <NavLink to="/profile">My Profile</NavLink>
+            <NavLink className="font-bold" to="/">Home</NavLink>
+            <NavLink className="font-bold" to="/brands">Brands</NavLink>
+            <NavLink className="font-bold" to="/profile">Profile</NavLink>
           </ul>
         </div>
         <div className="navbar-end">
