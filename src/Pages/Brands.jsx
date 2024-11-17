@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import BrandName from "../Components/BrandName";
 import { AuthContex } from "../Provider/AuthProvider";
+import { Link } from "react-router-dom";
 
 const Brands = () => {
   const { watches } = useContext(AuthContex);
@@ -28,9 +29,9 @@ const Brands = () => {
                 <i class="fa-regular fa-star"></i>
               </div>
               <div className="card-actions">
-                <button className="btn bg-[#F96E2A] text-white">
-                  Collect Coupons now
-                </button>
+                <Link to={`/coupon/${watch._id}`} className="btn bg-[#F96E2A] text-white">
+                View Coupons
+                </Link>
               </div>
             </div>
           </div>

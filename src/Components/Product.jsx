@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { AuthContex } from "../Provider/AuthProvider";
 
 const Product = () => {
@@ -26,9 +27,12 @@ const Product = () => {
                 <i class="fa-regular fa-star"></i>
               </div>
               <div className="card-actions">
-                <button className="btn bg-[#F96E2A] text-white">
-                  Collect Coupons now
-                </button>
+                <Link
+                  to={`/coupon/${watch._id}`}
+                  className="btn bg-[#F96E2A] text-white"
+                >
+                  View Coupons
+                </Link>
               </div>
             </div>
           </div>
