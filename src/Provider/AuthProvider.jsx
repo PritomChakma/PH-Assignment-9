@@ -1,9 +1,15 @@
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+} from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
+import auth from "../Firebase/Firebase.config";
 
 export const AuthContex = createContext();
 const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
   const [watches, setWatches] = useState([]);
-
+  console.log(user);
   useEffect(() => {
     fetch("/products.json")
       .then((response) => response.json())
@@ -11,9 +17,29 @@ const AuthProvider = ({ children }) => {
       .catch((error) => console.error("Error loading the data:", error));
   }, []);
 
-  const authInfo = {
-    watches,
+  // login system with google firebase
+  const createNewUser = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
   };
+
+
+
+
+  const authInfo = {
+    user,
+    setUser,
+    watches,
+    createNewUser,
+  };
+
+  useEffect(() => {
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => {
+      unSubscribe();
+    };
+  }, []);
 
   return <AuthContex.Provider value={authInfo}>{children}</AuthContex.Provider>;
 };
