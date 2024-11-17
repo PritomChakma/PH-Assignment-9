@@ -1,0 +1,80 @@
+[
+  {
+    "_id": "1",
+    "brand_name": "Bvlgari",
+    "name": "Octo Finissimo X Laurent Grasso",
+    "rating": 4.8,
+    "description": "The Octo Finissimo X Laurent Grasso is a masterpiece of ultrathin design, featuring exceptional artistry and craftsmanship.",
+    "brand_logo": "https://i.ibb.co.com/6ZdnLNT/Bulgari-Emblem.png",
+    "coupons": [
+      { "code": "BVL20OFF", "discount": "20%" },
+      { "code": "FREESHIP", "discount": "Free Shipping" }
+    ],
+    "shop-Link": "https://example.com/shop/octo-finissimo-laurent-grasso",
+    "category": "Luxury Watches",
+    "isSaleOn": true
+  },
+  {
+    "_id": "2",
+    "brand_name": "Bvlgari",
+    "name": "Bvlgari Aluminium White Automatic",
+    "rating": 4.6,
+    "description": "A stylish and durable automatic watch with a sleek white aluminum finish.",
+    "brand_logo": "https://i.ibb.co.com/6ZdnLNT/Bulgari-Emblem.png",
+    "coupons": [{ "code": "BVL15OFF", "discount": "15%" }],
+    "shop-Link": "https://example.com/shop/bvlgari-aluminium-white-automatic",
+    "category": "Luxury Watches",
+    "isSaleOn": false
+  },
+  {
+    "_id": "3",
+    "brand_name": "Rolex",
+    "name": "Explorer II White Dial Oystersteel",
+    "rating": 4.9,
+    "description": "The Explorer II combines rugged durability with a classic white dial for adventure-ready sophistication.",
+    "brand_logo": "https://i.ibb.co.com/M5wdq2g/post-7-6485.jpg",
+    "coupons": [{ "code": "ROLEX5OFF", "discount": "5%" }],
+    "shop-Link": "https://example.com/shop/explorer-ii-white-dial",
+    "category": "Luxury Watches",
+    "isSaleOn": true
+  },
+  {
+    "_id": "4",
+    "brand_name": "Rolex",
+    "name": "Yacht-Master 40 Diamond",
+    "rating": 4.9,
+    "description": "A dazzling Yacht-Master adorned with diamonds for a truly luxurious timepiece.",
+    "brand_logo": "https://i.ibb.co.com/M5wdq2g/post-7-6485.jpg",
+    "coupons": [{ "code": "DIAMOND10", "discount": "10%" }],
+    "shop-Link": "https://example.com/shop/yacht-master-40-diamond",
+    "category": "Luxury Watches",
+    "isSaleOn": false
+  },
+  {
+    "_id": "5",
+    "brand_name": "Casio",
+    "name": "MTP-VD01-2EVUDF",
+    "rating": 4.4,
+    "description": "A reliable and affordable watch with a sleek design and durable build.",
+    "brand_logo": "https://i.ibb.co.com/VpK3v0P/0ac66c2f437644e10300b7fc5240ca1a.jpg",
+    "coupons": [
+      { "code": "CASIO10", "discount": "10%" },
+      { "code": "SUMMERSALE", "discount": "15%" }
+    ],
+    "shop-Link": "https://example.com/shop/mtp-vd01-2evudf",
+    "category": "Affordable Watches",
+    "isSaleOn": true
+  },
+  {
+    "_id": "6",
+    "brand_name": "Casio",
+    "name": "MTP-1374D-2AVDF",
+    "rating": 4.3,
+    "description": "A functional and fashionable watch for everyday wear with a classic design.",
+    "brand_logo": "https://i.ibb.co.com/VpK3v0P/0ac66c2f437644e10300b7fc5240ca1a.jpg",
+    "coupons": [{ "code": "CASIO5OFF", "discount": "5%" }],
+    "shop-Link": "https://example.com/shop/mtp-1374d-2avdf",
+    "category": "Affordable Watches",
+    "isSaleOn": false
+  }
+]
