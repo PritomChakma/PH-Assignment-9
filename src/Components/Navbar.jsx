@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-
+import logo from "../assets/logo.png.png";
 const Navbar = () => {
   return (
-    <div>
+    <div className="w-11/12 mx-auto">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -27,15 +27,18 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <NavLink to="/">Home</NavLink>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/brands">Brands</NavLink>
+              <NavLink to="/profile">My Profile</NavLink>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          {/* <a className="btn btn-ghost text-xl">daisyUI</a> */}
+          <img className=" w-20 lg:w-28 " src={logo} alt="" />
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+        <div className="navbar-center hidden lg:flex ">
+          <ul className="menu menu-horizontal px-1 gap-5">
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/brands">Brands</NavLink>
+            <NavLink to="/profile">My Profile</NavLink>
           </ul>
         </div>
         <div className="navbar-end">
