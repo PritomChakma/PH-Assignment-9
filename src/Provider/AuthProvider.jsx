@@ -9,7 +9,6 @@ const AuthProvider = ({ children }) => {
       .then((response) => response.json())
       .then((data) => setWatches(data))
       .catch((error) => console.error("Error loading the data:", error));
-    console.log(watches);
   }, []);
 
   const authInfo = {

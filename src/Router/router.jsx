@@ -3,6 +3,8 @@ import AuthLayout from "../Layout/AuthLayout";
 import MainLayout from "../Layout/MainLayout";
 import Brands from "../Pages/Brands";
 import Home from "../Pages/Home";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -20,16 +22,16 @@ const router = createBrowserRouter([
       {
         path: "/auth",
         element: <AuthLayout></AuthLayout>,
-        children:[
+        children: [
           {
-            path:"/auth/login",
-            element:<h2>Login</h2>
+            path: "/auth/login",
+            element: <Login></Login>,
           },
           {
-            path:"/auth/register",
-            element:<h2>Register</h2>
-          }
-        ]
+            path: "/auth/register",
+            element: <Register></Register>,
+          },
+        ],
       },
     ],
   },
