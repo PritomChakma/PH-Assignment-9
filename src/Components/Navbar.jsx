@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png.png";
 const Navbar = () => {
   return (
@@ -26,9 +26,15 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              <NavLink className="font-bold" to="/">Home</NavLink>
-              <NavLink className="font-bold" to="/brands">Brands</NavLink>
-              <NavLink className="font-bold" to="/profile">Profile</NavLink>
+              <NavLink className="font-bold" to="/">
+                Home
+              </NavLink>
+              <NavLink className="font-bold" to="/brands">
+                Brands
+              </NavLink>
+              <NavLink className="font-bold" to="/profile">
+                Profile
+              </NavLink>
             </ul>
           </div>
           {/* <a className="btn btn-ghost text-xl">daisyUI</a> */}
@@ -36,13 +42,19 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex ">
           <ul className="menu menu-horizontal px-1 gap-5">
-            <NavLink className="font-bold" to="/">Home</NavLink>
-            <NavLink className="font-bold" to="/brands">Brands</NavLink>
-            <NavLink className="font-bold" to="/profile">Profile</NavLink>
+            <NavLink className="font-bold" to="/">
+              Home
+            </NavLink>
+            <NavLink className="font-bold" to="/brands">
+              Brands
+            </NavLink>
+            <NavLink className="font-bold" to="/profile">
+              Profile
+            </NavLink>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <Link className="btn" to="/auth/login">Login</Link>
         </div>
       </div>
     </div>
