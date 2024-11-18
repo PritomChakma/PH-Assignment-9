@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContex } from "../Router/AuthProvider";
 // import { AuthContex } from "../Provider/AuthProvider";
@@ -6,6 +6,31 @@ import { AuthContex } from "../Router/AuthProvider";
 const Register = () => {
   const { createNewUser, setUser, updateUserProfile } = useContext(AuthContex);
   const navigate = useNavigate();
+
+  const [passwordError, setPasswordError] = useState("");
+
+  const validatePassword = (password) => {
+    const uppercase = /[A-Z]/;
+    const lowercase = /[a-z]/;
+    const minLength = 6;
+
+    if (!uppercase.test(password)) {
+      setPasswordError("Password must contain at least one uppercase letter.");
+      return false;
+    }
+    if (!lowercase.test(password)) {
+      setPasswordError("Password must contain at least one lowercase letter.");
+      return false;
+    }
+    if (password.length < minLength) {
+      setPasswordError("Password must be at least 6 characters long.");
+      return false;
+    }
+
+    setPasswordError(""); // Clear the error if all conditions are met
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
@@ -13,23 +38,21 @@ const Register = () => {
     const photo = form.get("photo");
     const email = form.get("email");
     const password = form.get("password");
-    // console.log({ name, photo, email, password });
+
+    if (!validatePassword(password)) {
+      return;
+    }
 
     createNewUser(email, password)
       .then((result) => {
         const user = result.user;
         setUser(user);
-        updateUserProfile({ displayName: name, photoURL: photo }).then(
-          () => {
-            navigate("/")
-          }
-        );
+        updateUserProfile({ displayName: name, photoURL: photo }).then(() => {
+          navigate("/");
+        });
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-        // console.log(errorCode, errorMessage);
+        setPasswordError({ ...error, login: err.code });
       });
   };
 
@@ -87,6 +110,9 @@ const Register = () => {
               className="input input-bordered bg-[#F3F3F3]"
               required
             />
+            {passwordError && (
+              <p className="text-red-500 text-sm mt-1">{passwordError}</p>
+            )}
           </div>
           <div className="form-control mt-6">
             <button className="btn btn-neutral">Register</button>
