@@ -11,7 +11,7 @@
       { "code": "BVL20OFF", "discount": "20%" },
       { "code": "FREESHIP", "discount": "Free Shipping" }
     ],
-    "shop-Link": "https://example.com/shop/octo-finissimo-laurent-grasso",
+    "shop-Link": "https://www.bulgari.com/en-bd/",
     "category": "Luxury Watches",
     "isSaleOn": true
   },
@@ -24,7 +24,7 @@
     "description": "A stylish and durable automatic watch with a sleek white aluminum finish.",
     "brand_logo": "https://i.ibb.co.com/6ZdnLNT/Bulgari-Emblem.png",
     "coupons": [{ "code": "BVL15OFF", "discount": "15%" }],
-    "shop-Link": "https://example.com/shop/bvlgari-aluminium-white-automatic",
+    "shop-Link": "https://www.bulgari.com/en-bd/",
     "category": "Luxury Watches",
     "isSaleOn": false
   },

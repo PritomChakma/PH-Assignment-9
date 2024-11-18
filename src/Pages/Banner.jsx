@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import alibaba from "../assets/alibaba.png";
 import ali from "../assets/aliexpress.png";
 import booking from "../assets/bbooking.png";
@@ -40,7 +41,11 @@ const Banner = () => {
             <img className="w-32 md:w-52 h-16 md:h-28" src={alibaba} alt="" />
           </div>
 
-          <button className="btn bg-[#F96E2A] text-white mt-5">See All Brand</button>
+          <div className="text-center mt-5">
+        <Link className="btn bg-[#F96E2A] text-white" to="/brands">
+          View All Brands Coupon
+        </Link>
+      </div>
         </div>
       </div>
     </div>

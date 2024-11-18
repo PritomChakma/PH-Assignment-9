@@ -33,14 +33,26 @@ const CuponPage = () => {
           <img className="h-60 w-60 p-5" src={item.image} alt={item.name} />
         </figure>
         <div className="card-body">
-          <h2 className="font-bold text-xl">
+          <h2 className="font-bold">
             <span className="mr-2">Brand:</span>
             {item.brand_name}
           </h2>
           <h2 className="card-title text-2xl">{item.name}</h2>
-          <p className="text-lg">
-            Rating: {item.rating || "No rating available"}
-          </p>
+          <div className="flex items-center gap-5">
+            <div>
+              <p className="text-lg">
+                Rating: {item.rating || "No rating available"}
+              </p>
+            </div>
+
+            <div className="text-orange-400">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -60,12 +72,14 @@ const CuponPage = () => {
                 >
                   <button className="btn btn-secondary">Copy Code</button>
                 </CopyToClipboard>
-                <button
-                  onClick={() => window.open(item.shop_Link, "_blank")}
+                <a
+                  href={item.shop_Link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn btn-primary"
                 >
                   Use Now
-                </button>
+                </a>
               </div>
             </div>
           </div>

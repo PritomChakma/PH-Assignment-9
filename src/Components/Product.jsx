@@ -41,11 +41,7 @@ const Product = () => {
         ))}
       </div>
 
-      <div className="text-center mt-5">
-        <Link className="btn bg-[#F96E2A] text-white" to="/brands">
-          View All Coupon
-        </Link>
-      </div>
+     
     </div>
   );
 };
