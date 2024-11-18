@@ -78,6 +78,14 @@ const Navbar = () => {
           )}
         </div>
       </div>
+
+     <div className="text-center font-semibold py-5">
+     {user && user?.email ? (
+        <h2><span className="mr-2">Welcome</span>{user.displayName}</h2>
+      ) : (
+        <h2>Please login</h2>
+      )}
+     </div>
     </div>
   );
 };
