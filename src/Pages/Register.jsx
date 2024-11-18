@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContex } from "../Provider/AuthProvider";
+import { AuthContex } from "../Router/AuthProvider";
+// import { AuthContex } from "../Provider/AuthProvider";
 
 const Register = () => {
   const { createNewUser, setUser, updateUserProfile } = useContext(AuthContex);

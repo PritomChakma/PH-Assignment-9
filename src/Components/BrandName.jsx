@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Marquee from "react-fast-marquee";
-import { AuthContex } from "../Provider/AuthProvider";
+import { AuthContex } from "../Router/AuthProvider";
+// import { AuthContex } from "../Provider/AuthProvider";
 
 const BrandName = () => {
   const { watches } = useContext(AuthContex);

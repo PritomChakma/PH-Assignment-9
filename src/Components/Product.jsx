@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContex } from "../Provider/AuthProvider";
-
+import { AuthContex } from "../Router/AuthProvider";
 const Product = () => {
   const { watches } = useContext(AuthContex);
   return (
@@ -9,7 +8,7 @@ const Product = () => {
       <div className="watch-items grid md:grid-cols-3 mx-auto gap-5 w-11/12 ">
         {watches.slice(0, 6).map((watch) => (
           <div
-            className="card bg-base-100 shadow-xl border-[#78B3CE]"
+            className="card bg-base-100 shadow-xl animate__animated  animate__backInUp"
             key={watch._id}
           >
             <figure className="px-10 pt-10">

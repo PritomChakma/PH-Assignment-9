@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { AuthContex } from "../Provider/AuthProvider";
+import { AuthContex } from "../Router/AuthProvider";
+// import { AuthContex } from "../Provider/AuthProvider";
 
 const Profile = () => {
   const { user } = useContext(AuthContex);
@@ -33,7 +34,6 @@ const Profile = () => {
               </svg>
               <span className="dark:text-gray-600">{user.email}</span>
             </span>
-   
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import BrandName from "../Components/BrandName";
-import { AuthContex } from "../Provider/AuthProvider";
+// import { AuthContex } from "../Provider/AuthProvider";
 import { Link } from "react-router-dom";
+import { AuthContex } from "../Router/AuthProvider";
 
 const Brands = () => {
   const { watches } = useContext(AuthContex);
@@ -10,7 +11,7 @@ const Brands = () => {
       <BrandName></BrandName>
       <div className="watch-items grid md:grid-cols-3 mx-auto gap-5 w-11/12 ">
         {watches.map((watch) => (
-          <div className="card bg-base-100 shadow-xl  border-[#78B3CE]">
+          <div className="card bg-base-100 shadow-xl  border-[#78B3CE] animate__animated  animate__backInUp">
             <figure className="px-10 pt-10">
               <img src={watch.image} alt="watch" className="rounded-xl h-40 " />
             </figure>
@@ -29,8 +30,11 @@ const Brands = () => {
                 <i class="fa-regular fa-star"></i>
               </div>
               <div className="card-actions">
-                <Link to={`/coupon/${watch._id}`} className="btn bg-[#F96E2A] text-white">
-                View Coupons
+                <Link
+                  to={`/coupon/${watch._id}`}
+                  className="btn bg-[#F96E2A] text-white"
+                >
+                  View Coupons
                 </Link>
               </div>
             </div>
