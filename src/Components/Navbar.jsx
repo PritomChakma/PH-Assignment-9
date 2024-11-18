@@ -47,13 +47,13 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex ">
           <ul className="menu menu-horizontal px-1 gap-5">
-            <NavLink className="font-bold" to="/">
+            <NavLink className="font-bold text-lg" to="/">
               Home
             </NavLink>
-            <NavLink className="font-bold" to="/brands">
+            <NavLink className="font-bold text-lg" to="/brands">
               Brands
             </NavLink>
-            <NavLink className="font-bold" to="/profile">
+            <NavLink className="font-bold text-lg" to="/profile">
               Profile
             </NavLink>
           </ul>
@@ -62,14 +62,13 @@ const Navbar = () => {
           {user && user?.email ? (
             <div>
               <img className="w-12 rounded-full" src={user.photoURL} alt="" />
-           
             </div>
           ) : (
             <img src={userId} alt="" />
           )}
 
           {user && user?.email ? (
-            <button onClick={logOut} className="btn">
+            <button onClick={logOut} className="btn btn-neutral">
               Logout
             </button>
           ) : (

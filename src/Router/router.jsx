@@ -5,6 +5,7 @@ import Brands from "../Pages/Brands";
 import CuponPage from "../Pages/CuponPage";
 import Home from "../Pages/Home";
 import Login from "../Pages/Login";
+import Profile from "../Pages/Profile";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
 
@@ -20,6 +21,14 @@ const router = createBrowserRouter([
       {
         path: "/brands",
         element: <Brands></Brands>,
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/coupon/:id",

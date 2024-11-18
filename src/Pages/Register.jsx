@@ -12,7 +12,7 @@ const Register = () => {
     const photo = form.get("photo");
     const email = form.get("email");
     const password = form.get("password");
-    console.log({ name, photo, email, password });
+    // console.log({ name, photo, email, password });
 
     createNewUser(email, password)
       .then((result) => {
@@ -28,7 +28,7 @@ const Register = () => {
         const errorCode = error.code;
         const errorMessage = error.message;
         // ..
-        console.log(errorCode, errorMessage);
+        // console.log(errorCode, errorMessage);
       });
   };
 

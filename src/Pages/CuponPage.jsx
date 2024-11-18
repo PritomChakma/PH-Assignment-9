@@ -5,7 +5,7 @@ import { AuthContex } from "../Provider/AuthProvider";
 const CuponPage = () => {
   const { watches } = useContext(AuthContex);
   const data = useLoaderData();
-  console.log(data);
+  // console.log(data);
   return (
     <div>
       <h1>Product List</h1>

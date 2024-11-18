@@ -1,32 +1,44 @@
 import { useContext, useState } from "react";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContex } from "../Provider/AuthProvider";
 
 const Login = () => {
-  const { signInUser, setUser } = useContext(AuthContex);
+  const { signInUser, setUser, googleUserLogin } = useContext(AuthContex);
   const [error, setError] = useState({});
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location);
+  // console.log(location);
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
     const email = form.get("email");
     const password = form.get("password");
-    console.log({ email, password });
+    // console.log({ email, password });
     signInUser(email, password)
       .then((result) => {
         const user = result.user;
         setUser(user);
         navigate(location?.state ? location.state : "/");
-        console.log(user);
+        // console.log(user);
       })
       .catch((err) => {
         setError({ ...error, login: err.code });
       });
   };
-
+  // google login
+  const handleGoogleLogin = (e) => {
+    e.preventDefault();
+    googleUserLogin()
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((err) => {
+        setError({ ...error, login: err.code });
+      });
+  };
   return (
     <div className="min-h-screen flex justify-center items-center">
       <div className="card bg-base-100 w-full max-w-md shrink-0 rounded-none  border-2 p-7">
@@ -57,7 +69,11 @@ const Login = () => {
               className="input input-bordered"
               required
             />
-            {error.login && <label className="label text-sm text-red-600">{error.login}</label>}
+            {error.login && (
+              <label className="label text-sm text-red-600">
+                {error.login}
+              </label>
+            )}
             <label className="label">
               <a href="#" className="label-text-alt link link-hover">
                 Forgot password?
@@ -68,19 +84,11 @@ const Login = () => {
             <button className="btn btn-neutral">Login</button>
           </div>
           <div className="form-control ">
-            <button className="btn ">
+            <button onClick={handleGoogleLogin} className="btn ">
               <span className="text-blue-500 font-bold text-lg">
                 <FaGoogle />
               </span>
               Login with Google
-            </button>
-          </div>
-          <div className="form-control ">
-            <button className="btn ">
-              <span className=" font-bold text-lg">
-                <FaGithub />
-              </span>
-              Login with github
             </button>
           </div>
         </form>
