@@ -34,7 +34,7 @@ const Banner = () => {
             Browse, click, and save with our latest collection of promo codes
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 items-center gap-3 md:gap-8 mx-auto justify-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 items-center gap-3 md:gap-8 mx-auto justify-center w-11/12">
             <img className="w-32 md:w-52 h-16 md:h-28" src={daraz} alt="" />
             <img className="w-32 md:w-52 h-16 md:h-28" src={booking} alt="" />
             <img className="w-32 md:w-52 h-16 md:h-28" src={ali} alt="" />

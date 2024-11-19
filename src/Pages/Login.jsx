@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { AuthContex } from "../Router/AuthProvider";
 
 const Login = () => {
@@ -8,37 +9,73 @@ const Login = () => {
   const [error, setError] = useState({});
   const location = useLocation();
   const navigate = useNavigate();
-  // console.log(location);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
     const email = form.get("email");
     const password = form.get("password");
-    // console.log({ email, password });
+
     signInUser(email, password)
       .then((result) => {
         const user = result.user;
         setUser(user);
+        toast.success("Login successful!", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
         navigate(location?.state ? location.state : "/");
-        // console.log(user);
       })
       .catch((err) => {
         setError({ ...error, login: err.code });
+        toast.error("Login failed! Please try again.", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
       });
   };
-  // google login
+
   const handleGoogleLogin = (e) => {
     e.preventDefault();
     googleUserLogin()
       .then((result) => {
         const user = result.user;
         setUser(user);
+        toast.success("Google login successful!", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         setError({ ...error, login: err.code });
+        toast.error("Google login failed! Please try again.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
       });
   };
+
   return (
     <div className="min-h-screen flex justify-center items-center">
       <div className="card bg-base-100 w-full max-w-md shrink-0 rounded-none  border-2 p-7">
