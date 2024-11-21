@@ -19,7 +19,7 @@ const CuponPage = () => {
       setItem({});
       setCoupons([]);
     }
-  }, [data, id]);__
+  }, [data, id]);
 
   const handleCopy = () => {
     toast.success("Coupon code copied successfully!");

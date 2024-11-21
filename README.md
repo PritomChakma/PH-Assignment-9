@@ -50,16 +50,7 @@ The project aims to simplify the process of discovering and using discount coupo
 
    - Mobile, tablet, and desktop-friendly layouts.
 
-8. **Update Profile Feature**
-
-   - Update user name and photo directly from the profile page.
-
-9. **Password Toggling and Validation**
-
-   - Show/hide passwords during registration.
-   - Enforce password complexity rules.
-
-10. **Error Handling**
+8. **Error Handling**
 
 - 404 Error page for invalid routes.
 - Toast messages for successful and failed actions.
